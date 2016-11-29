@@ -7,12 +7,7 @@ Feature: Suma
     When el operador sea 'sumar'
     Then solucion '2'
   
-   Scenario: Suma de un entero positivo y otro negativo
-    Given los parametros '-1' y '2'
-    When el operador sea 'sumar'
-    Then solucion '1'
-    
-  Scenario: Suma de un entero positivo y otro negativo
+   Scenario: Suma de un entero negativo y otro positivo
     Given los parametros '-1' y '2'
     When el operador sea 'sumar'
     Then solucion '1'
@@ -32,7 +27,7 @@ Feature: Suma
     When el operador sea 'sumar'
     Then solucion '2.5'
 
-  Scenario: Suma de un entero y un decimal
+  Scenario: Suma de un decimal y un entero
     Given los parametros '1.1' y '1'
     When el operador sea 'sumar'
     Then solucion '2.1'

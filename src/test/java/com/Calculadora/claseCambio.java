@@ -21,6 +21,7 @@ public class claseCambio {
 	 
 	@Then("solucion '(.+)'")
 	public void Soluciones(final float resultado) {
-	    assertTrue(calcu.getResultado() == resultado);
+		float delta = (float)0.0000001;
+	    assertEquals(calcu.getResultado(), resultado, delta);
 	}
 }

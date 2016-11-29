@@ -4,15 +4,14 @@ public class Calculadora {
     private float numeroUno, numeroDos, resultado;
     private String operador;
      
-    public Calculadora ()
-    {
+    public Calculadora () {
          
     }
      
-    public void asignarValores(float uno, float dos)
+    public void asignarValores(float d, float e)
     {
-        numeroUno = uno;
-        numeroDos = dos;
+        numeroUno = d;
+        numeroDos = e;
     }
      
     public void asignarOperador(String oper)
@@ -44,47 +43,56 @@ public class Calculadora {
         operador = oper;
     }
      
-    public void sumar (float uno, float dos)
+    public void sumar(float numeroUno2, float numeroDos2)
     {
-        resultado =  uno + dos;
+        resultado =  numeroUno2 + numeroDos2;
     }
      
-    public void restar (float uno, float dos)
+    public void restar(float numeroUno2, float numeroDos2)
     {
-        resultado =  uno - dos;
+        resultado =  numeroUno2 - numeroDos2;
     }
      
-    public void multiplicar (float uno, float dos)
+    public void multiplicar (float numeroUno2, float numeroDos2)
     {
-        resultado = uno * dos;
+        resultado = numeroUno2 * numeroDos2;
     }
-     
-    public void dividir (float uno, float dos)
+
+    public void dividir (float numeroUno2, float numeroDos2)
     {
-        resultado =  uno / dos;
+        resultado =  numeroUno2 / numeroDos2;
     }
+    
     public float getNumeroUno() {
         return numeroUno;
     }
+    
     public void setNumeroUno(float numeroUno) {
         this.numeroUno = numeroUno;
     }
+    
     public float getNumeroDos() {
         return numeroDos;
     }
+    
     public void setNumeroDos(float numeroDos) {
         this.numeroDos = numeroDos;
     }
+    
     public String getOperador() {
         return operador;
     }
+    
     public void setOperador(String operador) {
         this.operador = operador;
     }
+    
     public float getResultado() {
         return resultado;
     }
+    
     public void setResultado(float resultado) {
         this.resultado = resultado;
     }
+    
 }
