@@ -9,7 +9,7 @@ public class claseCambio {
 	
 	private Calculadora calcu = new Calculadora();
 
-	@Given("los parametros '(.+)', y '(.+)'")
+	@Given("los parametros '(.+)' y '(.+)'")
 	public void mandarParametros(final float uno, final float dos) {
 	    calcu.asignarValores(uno,dos);
 	}
