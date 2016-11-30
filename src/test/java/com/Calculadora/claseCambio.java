@@ -1,6 +1,7 @@
 package com.Calculadora;
 
 import static org.junit.Assert.*;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,7 +22,12 @@ public class claseCambio {
 	 
 	@Then("solucion '(.+)'")
 	public void Soluciones(final float resultado) {
-		float delta = (float)0.0000001;
-	    assertEquals(calcu.getResultado(), resultado, delta);
+		float delta = (float)0.000001;
+		assertEquals(calcu.getResultado(), resultado, delta);
+	}
+	
+	@Then("division por cero es true")
+	public void divisionPorCero() {
+	    assertTrue(calcu.getDivisionByZero());
 	}
 }

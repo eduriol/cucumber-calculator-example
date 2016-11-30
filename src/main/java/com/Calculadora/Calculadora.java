@@ -2,6 +2,7 @@ package com.Calculadora;
 public class Calculadora {
      
     private float numeroUno, numeroDos, resultado;
+    private boolean divisionByZero;
     private String operador;
      
     public Calculadora () {
@@ -17,6 +18,7 @@ public class Calculadora {
     public void asignarOperador(String oper)
     {
         operador = oper;
+        divisionByZero = false;
         if (operador.equals("sumar"))
         {
             this.sumar(numeroUno, numeroDos);
@@ -31,7 +33,10 @@ public class Calculadora {
         }
         else if (operador.equals("dividir"))
         {
-            this.dividir(numeroUno, numeroDos);
+        	this.dividir(numeroUno, numeroDos);
+            if (resultado == Float.POSITIVE_INFINITY || Float.isNaN(resultado)) {
+            	divisionByZero = true;
+            }
         }
          
     }
@@ -60,7 +65,7 @@ public class Calculadora {
 
     public void dividir (float numeroUno2, float numeroDos2)
     {
-        resultado =  numeroUno2 / numeroDos2;
+    	resultado =  numeroUno2 / numeroDos2;
     }
     
     public float getNumeroUno() {
@@ -95,4 +100,7 @@ public class Calculadora {
         this.resultado = resultado;
     }
     
+    public boolean getDivisionByZero() {
+    	return divisionByZero;
+    }
 }
