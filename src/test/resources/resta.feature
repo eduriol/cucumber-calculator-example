@@ -31,3 +31,14 @@ Feature: Resta
     Given los parametros '1.1' y '1'
     When el operador sea 'restar'
     Then solucion '0.1'
+
+  Scenario Outline: Mas restas de ejemplo
+    Given los parametros <uno> y <dos>
+    When el operador sea <operador>
+    Then solucion <resultado>
+  Examples:
+    | uno   | dos | operador   | resultado |
+    |  12   |  5  |  "restar"   | 7 |
+    |  20   |  5  |  "restar"  | 15 |
+    |  35   |  7  |  "restar" | 28  |
+    |  4    |  2  |  "restar" | 2 |

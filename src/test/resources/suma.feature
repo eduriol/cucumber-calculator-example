@@ -31,3 +31,14 @@ Feature: Suma
     Given los parametros '1.1' y '1'
     When el operador sea 'sumar'
     Then solucion '2.1'
+
+  Scenario Outline: Mas sumas de ejemplo
+    Given los parametros <uno> y <dos>
+    When el operador sea <operador>
+    Then solucion <resultado>
+  Examples:
+    | uno   | dos | operador   | resultado |
+    |  12   |  5  |  "sumar"   | 17 |
+    |  20   |  5  |  "sumar"  | 25 |
+    |  35   |  7  |  "sumar" | 42  |
+    |  4    |  2  |  "sumar" | 6 |

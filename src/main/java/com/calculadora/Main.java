@@ -1,4 +1,4 @@
-package com.Calculadora;
+package com.calculadora;
 
 public class Main {
 

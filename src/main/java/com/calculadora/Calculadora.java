@@ -1,4 +1,4 @@
-package com.Calculadora;
+package com.calculadora;
 public class Calculadora {
      
     private float numeroUno, numeroDos, resultado;

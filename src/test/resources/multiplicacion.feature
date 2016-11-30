@@ -36,3 +36,14 @@ Feature: Multiplicacion
     Given los parametros '1.1' y '2'
     When el operador sea 'multiplicar'
     Then solucion '2.2'
+  
+ Scenario Outline: Mas multiplicaciones de ejemplo
+    Given los parametros <uno> y <dos>
+    When el operador sea <operador>
+    Then solucion <resultado>
+  Examples:
+    | uno   | dos | operador   | resultado |
+    |  12   |  5  |  "multiplicar"   | 60 |
+    |  20   |  5  |  "multiplicar"  | 100 |
+    |  35   |  7  |  "multiplicar" | 245  |
+    |  4    |  2  |  "multiplicar" | 8 |

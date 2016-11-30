@@ -41,3 +41,14 @@ Feature: Division
     Given los parametros '1.1' y '2'
     When el operador sea 'dividir'
     Then solucion '0.55'
+    
+  Scenario Outline: Mas divisiones de ejemplo
+    Given los parametros <uno> y <dos>
+    When el operador sea <operador>
+    Then solucion <resultado>
+  Examples:
+    | uno   | dos | operador   | resultado |
+    |  12   |  5  |  "dividir"   | 2.4 |
+    |  20   |  5  |  "dividir"  | 4 |
+    |  35   |  7  |  "dividir" | 5  |
+    |  4    |  2  |  "dividir" | 2 |
